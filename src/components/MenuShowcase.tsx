@@ -2,6 +2,8 @@
 import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
+
+
 const menuItems = [
   {
     id: 1,
@@ -85,6 +87,7 @@ const MenuShowcase = () => {
       }
     }
   };
+
 
   return (
     <section className="py-20 bg-white" id="how-it-works" ref={ref}>

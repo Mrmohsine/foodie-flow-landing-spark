@@ -2,8 +2,9 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone } from "lucide-react";
 import Button from "./Button";
-
+import { useUrl } from "../context/Url.jsx";
 const Footer = () => {
+  const { url, setUrl } = useUrl();
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8" id="contact">
       <div className="foodie-container">
@@ -71,7 +72,7 @@ const Footer = () => {
                 <span>mohcin</span>
               </li>
               <li className="mt-4">
-                <Button>
+                <Button href={url}>
                   Get started
                 </Button>
               </li>

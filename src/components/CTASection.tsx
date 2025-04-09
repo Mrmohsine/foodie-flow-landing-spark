@@ -55,7 +55,7 @@ const CTASection = () => {
                 Join hundreds of restaurants already using <span className="text-foodie-orange font-semibold">FoodieFlow</span> to enhance customer satisfaction, streamline service, boost profits and effortlessly customize your menu anytime, anywhere.
               </p>
 
-              <Button>
+              <Button href="">
                 Get started
               </Button>
             </motion.div>

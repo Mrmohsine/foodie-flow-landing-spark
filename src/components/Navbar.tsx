@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Button from "./Button";
+import { useUrl } from "../context/Url.jsx";
+
 
 const Navbar = () => {
+  const { url, setUrl } = useUrl();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -50,7 +53,7 @@ const Navbar = () => {
               {item}
             </motion.a>
           ))}
-          <Button>
+          <Button href={url}>
             Get started
           </Button>
         </nav>

@@ -2,6 +2,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "./Button";
+import { useUrl } from "../context/Url.jsx";
+
 
 const testimonials = [
   {
@@ -36,8 +38,10 @@ const TestimonialSection = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const { url, setUrl } = useUrl();
 
   return (
+    
     <section 
       className="py-20 bg-white overflow-hidden relative" 
       ref={sectionRef}
@@ -121,7 +125,7 @@ const TestimonialSection = () => {
           <p className="mb-6 text-lg text-gray-600 max-w-2xl mx-auto">
             Join hundreds of satisfied restaurant owners who have revolutionized their menu experience with FoodieFlow.
           </p>
-          <Button>
+          <Button href={url}>
             Get started
           </Button>
         </motion.div>

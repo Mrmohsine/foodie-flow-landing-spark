@@ -2,8 +2,10 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import Button from "./Button";
+import { useUrl } from "../context/Url.jsx";
 
 const HeroSection = () => {
+   const { url, setUrl } = useUrl();
   return (
     <section className="pt-32 pb-20 bg-gradient-to-b from-white to-foodie-soft-peach/30 relative overflow-hidden">
       <div className="foodie-container grid md:grid-cols-2 gap-8 items-center">
@@ -42,9 +44,9 @@ const HeroSection = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
 
-            <Button>
-              Explore Our Digital Menu <ChevronRight className="ml-2 h-5 w-5" />
-            </Button>            
+        <Button w="w-66" href={url}>
+          Explore Our Digital Menu <ChevronRight className="ml-2 h-5 w-5" />
+        </Button>     
           </motion.div>
         </motion.div>
 

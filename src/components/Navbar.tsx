@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Button from "./Button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
-          {["Features", "How It Works", "Pricing", "Contact"].map((item) => (
+          {["Features", "How It Works", "Reviews", "Contact"].map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
@@ -49,13 +50,9 @@ const Navbar = () => {
               {item}
             </motion.a>
           ))}
-          <motion.button
-            className="bg-foodie-orange hover:bg-foodie-dark-orange text-white px-5 py-2 rounded-full font-medium transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Started
-          </motion.button>
+          <Button>
+            Get started
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}

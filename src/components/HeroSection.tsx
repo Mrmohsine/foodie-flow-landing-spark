@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import Button from "./Button";
 
 const HeroSection = () => {
   return (
@@ -40,21 +41,10 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <motion.button
-              className="bg-foodie-orange hover:bg-foodie-dark-orange text-white px-8 py-3 rounded-full font-semibold shadow-lg flex items-center justify-center transition-colors"
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(255, 107, 53, 0.4)" }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Explore Our Digital Menu
-              <ChevronRight className="ml-2 h-5 w-5" />
-            </motion.button>
-            <motion.button
-              className="border-2 border-foodie-orange text-foodie-orange bg-white hover:bg-foodie-orange/5 px-8 py-3 rounded-full font-semibold flex items-center justify-center transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Request Demo
-            </motion.button>
+
+            <Button>
+              Explore Our Digital Menu <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>            
           </motion.div>
         </motion.div>
 

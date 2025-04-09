@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Button from "./Button";
 
 const CTASection = () => {
   return (
@@ -38,61 +39,27 @@ const CTASection = () => {
       <div className="foodie-container relative z-10">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="p-8 md:p-12 flex flex-col justify-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Ready to Transform Your Menu Experience?
-                </h2>
-                
-                <p className="text-gray-600 mb-8">
-                  Join hundreds of restaurants already using FoodieFlow to enhance 
-                  customer satisfaction, increase efficiency, and boost their bottom line.
-                </p>
-                
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "14-day free trial with all features",
-                    "No credit card required to start",
-                    "Dedicated onboarding support",
-                    "Easy setup in less than 30 minutes",
-                  ].map((feature, index) => (
-                    <motion.li 
-                      key={index}
-                      className="flex items-start"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.1 * index }}
-                    >
-                      <CheckCircle className="w-5 h-5 text-foodie-orange mr-3 mt-0.5 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <motion.button
-                    className="bg-foodie-orange hover:bg-foodie-dark-orange text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-colors"
-                    whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(255, 107, 53, 0.4)" }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Start Free Trial
-                  </motion.button>
-                  <motion.button
-                    className="border-2 border-foodie-orange text-foodie-orange bg-white hover:bg-foodie-orange/5 px-8 py-3 rounded-full font-semibold transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Schedule Demo
-                  </motion.button>
-                </div>
-              </motion.div>
-            </div>
+          <div className="p-8 md:p-12 flex flex-col justify-start bg-white">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Ready to Transform Your Menu Experience?
+              </h2>
+
+              <p className="text-lg text-gray-600 mb-10">
+                Join hundreds of restaurants already using <span className="text-foodie-orange font-semibold">FoodieFlow</span> to enhance customer satisfaction, streamline service, boost profits and effortlessly customize your menu anytime, anywhere.
+              </p>
+
+              <Button>
+                Get started
+              </Button>
+            </motion.div>
+          </div>
             
             <div className="bg-gradient-to-br from-foodie-orange to-foodie-dark-orange text-white p-8 md:p-12 flex flex-col justify-center">
               <motion.div

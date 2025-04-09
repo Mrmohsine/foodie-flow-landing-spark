@@ -1,6 +1,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Button from "./Button";
 
 const testimonials = [
   {
@@ -40,7 +41,7 @@ const TestimonialSection = () => {
     <section 
       className="py-20 bg-white overflow-hidden relative" 
       ref={sectionRef}
-      id="testimonials"
+      id="reviews"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -120,13 +121,9 @@ const TestimonialSection = () => {
           <p className="mb-6 text-lg text-gray-600 max-w-2xl mx-auto">
             Join hundreds of satisfied restaurant owners who have revolutionized their menu experience with FoodieFlow.
           </p>
-          <motion.button
-            className="bg-foodie-orange hover:bg-foodie-dark-orange text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-colors"
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(255, 107, 53, 0.4)" }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Get Started Today
-          </motion.button>
+          <Button>
+            Get started
+          </Button>
         </motion.div>
       </div>
     </section>

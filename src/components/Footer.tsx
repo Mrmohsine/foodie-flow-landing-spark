@@ -1,12 +1,13 @@
 
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone } from "lucide-react";
+import Button from "./Button";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-gray-900 text-white pt-16 pb-8" id="contact">
       <div className="foodie-container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Company Information */}
           <div>
             <motion.div
@@ -40,10 +41,10 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          <div className="ms-36 me-20">
+            <h3 className="text-lg font-semibold mb-4 ">Quick Links</h3>
             <ul className="space-y-2">
-              {["Home", "Features", "How It Works", "Pricing", "Contact", "FAQ"].map((link) => (
+              {["Home", "Features", "How It Works", "Reviews", "FAQ"].map((link) => (
                 <li key={link}>
                   <motion.a
                     href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
@@ -57,44 +58,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {["Blog", "Help Center", "Tutorials", "Case Studies", "API Documentation", "Partner Program"].map((resource) => (
-                <li key={resource}>
-                  <motion.a
-                    href="#"
-                    className="text-gray-400 hover:text-foodie-orange transition-colors"
-                    whileHover={{ x: 5 }}
-                  >
-                    {resource}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-400">
                 <Phone className="w-5 h-5 mr-3 text-foodie-orange" />
-                <span>(123) 456-7890</span>
+                <span>dont call me</span>
               </li>
               <li className="flex items-center text-gray-400">
                 <Mail className="w-5 h-5 mr-3 text-foodie-orange" />
-                <span>info@foodieflow.com</span>
+                <span>mohcin</span>
               </li>
               <li className="mt-4">
-                <motion.button
-                  className="bg-foodie-orange hover:bg-foodie-dark-orange text-white px-5 py-2 rounded-full font-medium transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Request Demo
-                </motion.button>
+                <Button>
+                  Get started
+                </Button>
               </li>
             </ul>
           </div>

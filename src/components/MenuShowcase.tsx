@@ -8,7 +8,7 @@ const menuItems = [
     name: "Avocado Toast",
     description: "Freshly smashed avocado on artisan sourdough with poached eggs",
     price: "$14.99",
-    image: "https://images.unsplash.com/photo-1603046891744-76f2e0741d64?auto=format&w=250&h=150&fit=crop",
+    image: "https://images.unsplash.com/photo-1687276287139-88f7333c8ca4?auto=format&w=250&h=150&fit=crop",
     category: "Breakfast"
   },
   {
@@ -16,7 +16,8 @@ const menuItems = [
     name: "Berry Acai Bowl",
     description: "Organic acai blend topped with fresh seasonal berries and granola",
     price: "$12.99",
-    image: "https://images.unsplash.com/photo-1590301157890-8c6808bc73cd?auto=format&w=250&h=150&fit=crop",
+    image: "https://images.unsplash.com/photo-1562003914-f554ea3473d5?auto=format&w=250&h=150&fit=crop",
+    
     category: "Breakfast"
   },
   {
@@ -86,7 +87,7 @@ const MenuShowcase = () => {
   };
 
   return (
-    <section className="py-20 bg-white" id="menu-showcase" ref={ref}>
+    <section className="py-20 bg-white" id="how-it-works" ref={ref}>
       <div className="foodie-container">
         <div className="text-center mb-16">
           <motion.h2
@@ -143,7 +144,7 @@ const MenuShowcase = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    View Details
+                    <b>Rating</b>
                   </motion.button>
                   <div className="flex space-x-1">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -169,13 +170,7 @@ const MenuShowcase = () => {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8 }}
         >
-          <motion.button
-            className="bg-foodie-orange hover:bg-foodie-dark-orange text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-colors"
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(255, 107, 53, 0.4)" }}
-            whileTap={{ scale: 0.98 }}
-          >
-            View Full Menu
-          </motion.button>
+          
         </motion.div>
       </div>
     </section>
